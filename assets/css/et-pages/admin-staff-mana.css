@@ -1,0 +1,8 @@
+.et-scrollable-table{
+    height: 100%;
+    overflow: scroll;
+}
+#et-success-alert{
+    position: absolute;
+    left: 50%;
+}

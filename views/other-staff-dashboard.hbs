@@ -1,0 +1,296 @@
+<div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
+
+
+	<div class="kt-portlet kt-portlet--fit kt-portlet--head-noborder kt-portlet--height-fluid-half">
+		<div class="kt-portlet__head kt-portlet__space-x">
+			<div class="kt-portlet__head-label">
+				<h3 class="kt-portlet__head-title">
+					Statistic
+				</h3>
+			</div>
+		</div>
+		<div class="kt-portlet__body kt-portlet__body--fluid">
+			<div class="kt-widget20">
+				<div class="kt-widget20__content kt-portlet__space-x">
+					<span class="kt-widget20__number kt-font-brand" id="et-no-tutor-stats"></span>
+					<span class="kt-widget20__desc">Tutees are not assigned</span>
+				</div>
+				<div class="kt-widget20__chart" style="height:130px;">
+					<div class="chartjs-size-monitor">
+						<div class="chartjs-size-monitor-expand">
+							<div class=""></div>
+						</div>
+						<div class="chartjs-size-monitor-shrink">
+							<div class=""></div>
+						</div>
+					</div>
+					<img src="../media/et-pages/chart1.png" style="height: 100%; width: 100%" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="kt-portlet kt-portlet--fit kt-portlet--head-noborder kt-portlet--height-fluid-half">
+		<div class="kt-portlet__head kt-portlet__space-x">
+			<div class="kt-portlet__head-label">
+				<h3 class="kt-portlet__head-title">
+					Statistic
+				</h3>
+			</div>
+		</div>
+		<div class="kt-portlet__body kt-portlet__body--fluid">
+			<div class="kt-widget20">
+				<div class="kt-widget20__content kt-portlet__space-x">
+					<span class="kt-widget20__number kt-font-brand" id="et-pair-stats"></span>
+					<span class="kt-widget20__desc">Tutor - tutee pairs under your management</span>
+				</div>
+				<div class="kt-widget20__chart" style="height:130px;">
+					<div class="chartjs-size-monitor">
+						<div class="chartjs-size-monitor-expand">
+							<div class=""></div>
+						</div>
+						<div class="chartjs-size-monitor-shrink">
+							<div class=""></div>
+						</div>
+					</div>
+
+					<img src="../media/et-pages/chart2.png" alt="" style="height: 100%; width: 100%">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-lg-6">
+			<!--begin::Portlet-->
+			<div class="kt-portlet">
+				<div class="kt-portlet__head">
+					<div class="kt-portlet__head-label">
+						<span class="kt-portlet__head-icon kt-hidden">
+							<i class="la la-gear"></i>
+						</span>
+						<h3 class="kt-portlet__head-title">
+							Student Interaction (7 days)
+						</h3>
+					</div>
+				</div>
+				<div class="kt-portlet__body">
+					<div id="et-student-interaction-chart-7" style="height: 300px;"></div>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-6">
+			<!--begin::Portlet-->
+			<div class="kt-portlet">
+				<div class="kt-portlet__head">
+					<div class="kt-portlet__head-label">
+						<span class="kt-portlet__head-icon kt-hidden">
+							<i class="la la-gear"></i>
+						</span>
+						<h3 class="kt-portlet__head-title">
+							Student Interaction (28 days)
+						</h3>
+					</div>
+				</div>
+				<div class="kt-portlet__body">
+					<div id="et-student-interaction-chart-28" style="height: 300px;"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="kt-portlet kt-portlet--mobile et-scrollable-table">
+		<div class="kt-portlet__head kt-portlet__head--lg">
+			<div class="kt-portlet__head-label">
+				<h3 class="kt-portlet__head-title">
+					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
+						height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
+						<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+							<rect x="0" y="0" width="24" height="24" />
+							<path
+								d="M11.1669899,4.49941818 L2.82535718,19.5143571 C2.557144,19.9971408 2.7310878,20.6059441 3.21387153,20.8741573 C3.36242953,20.9566895 3.52957021,21 3.69951446,21 L21.2169432,21 C21.7692279,21 22.2169432,20.5522847 22.2169432,20 C22.2169432,19.8159952 22.1661743,19.6355579 22.070225,19.47855 L12.894429,4.4636111 C12.6064401,3.99235656 11.9909517,3.84379039 11.5196972,4.13177928 C11.3723594,4.22181902 11.2508468,4.34847583 11.1669899,4.49941818 Z"
+								fill="#000000" opacity="0.3" />
+							<rect fill="#000000" x="11" y="9" width="2" height="7" rx="1" />
+							<rect fill="#000000" x="11" y="17" width="2" height="2" rx="1" />
+						</g>
+					</svg>
+					Tutees with no tutor
+				</h3>
+			</div>
+		</div>
+		<div class="kt-portlet__body kt-portlet__body--fit">
+
+			<!--begin: Datatable -->
+			<div class="kt-datatable kt-datatable--default kt-datatable--brand kt-datatable--loaded" id="local_data">
+				<table class="kt-datatable__table" style="display: block; overflow:scroll">
+					<thead class="kt-datatable__head">
+						<tr class="kt-datatable__row" style="left: 0px;">
+							<th class="kt-datatable__cell kt-datatable__cell--sort" data-field="Name">
+								<span style="width: 110px;">Name</span>
+							</th>
+							<th class="kt-datatable__cell kt-datatable__cell--sort" data-field="Fullname">
+								<span style="width: 110px;">Fullname</span>
+							</th>
+							<th class="kt-datatable__cell kt-datatable__cell--sort" data-field="Email">
+								<span style="width: 110px;">Email</span>
+							</th>
+						</tr>
+					</thead>
+					<tbody class="kt-datatable__body" id="et-student-no-tutor-list">
+
+					</tbody>
+				</table>
+
+			</div>
+
+			<!--end: Datatable -->
+
+		</div>
+	</div>
+
+	<div class="kt-portlet kt-portlet--mobile et-scrollable-table">
+		<div class="kt-portlet__head kt-portlet__head--lg">
+			<div class="kt-portlet__head-label">
+				<h3 class="kt-portlet__head-title">
+					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
+						height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
+						<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+							<rect x="0" y="0" width="24" height="24" />
+							<path
+								d="M11.1669899,4.49941818 L2.82535718,19.5143571 C2.557144,19.9971408 2.7310878,20.6059441 3.21387153,20.8741573 C3.36242953,20.9566895 3.52957021,21 3.69951446,21 L21.2169432,21 C21.7692279,21 22.2169432,20.5522847 22.2169432,20 C22.2169432,19.8159952 22.1661743,19.6355579 22.070225,19.47855 L12.894429,4.4636111 C12.6064401,3.99235656 11.9909517,3.84379039 11.5196972,4.13177928 C11.3723594,4.22181902 11.2508468,4.34847583 11.1669899,4.49941818 Z"
+								fill="#000000" opacity="0.3" />
+							<rect fill="#000000" x="11" y="9" width="2" height="7" rx="1" />
+							<rect fill="#000000" x="11" y="17" width="2" height="2" rx="1" />
+						</g>
+					</svg>
+					Tutees with no interaction for 7 days.
+				</h3>
+			</div>
+		</div>
+		<div class="kt-portlet__body kt-portlet__body--fit">
+
+			<!--begin: Datatable -->
+			<div class="kt-datatable kt-datatable--default kt-datatable--brand kt-datatable--loaded" id="local_data">
+				<table class="kt-datatable__table" style="display: block; overflow:scroll">
+					<thead class="kt-datatable__head">
+						<tr class="kt-datatable__row" style="left: 0px;">
+							<th class="kt-datatable__cell kt-datatable__cell--sort" data-field="Name">
+								<span style="width: 110px;">Name</span>
+							</th>
+							<th class="kt-datatable__cell kt-datatable__cell--sort" data-field="Fullname">
+								<span style="width: 110px;">Fullname</span>
+							</th>
+							<th class="kt-datatable__cell kt-datatable__cell--sort" data-field="Email">
+								<span style="width: 110px;">Email</span>
+							</th>
+						</tr>
+					</thead>
+					<tbody class="kt-datatable__body" id="et-student-no-interaction-7-list">
+
+					</tbody>
+				</table>
+
+			</div>
+
+			<!--end: Datatable -->
+
+		</div>
+	</div>
+
+	<div class="kt-portlet kt-portlet--mobile et-scrollable-table">
+		<div class="kt-portlet__head kt-portlet__head--lg">
+			<div class="kt-portlet__head-label">
+				<h3 class="kt-portlet__head-title">
+					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
+						height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
+						<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+							<rect x="0" y="0" width="24" height="24" />
+							<path
+								d="M11.1669899,4.49941818 L2.82535718,19.5143571 C2.557144,19.9971408 2.7310878,20.6059441 3.21387153,20.8741573 C3.36242953,20.9566895 3.52957021,21 3.69951446,21 L21.2169432,21 C21.7692279,21 22.2169432,20.5522847 22.2169432,20 C22.2169432,19.8159952 22.1661743,19.6355579 22.070225,19.47855 L12.894429,4.4636111 C12.6064401,3.99235656 11.9909517,3.84379039 11.5196972,4.13177928 C11.3723594,4.22181902 11.2508468,4.34847583 11.1669899,4.49941818 Z"
+								fill="#000000" opacity="0.3" />
+							<rect fill="#000000" x="11" y="9" width="2" height="7" rx="1" />
+							<rect fill="#000000" x="11" y="17" width="2" height="2" rx="1" />
+						</g>
+					</svg>
+					Tutees with no interaction for 28 days.
+				</h3>
+			</div>
+		</div>
+		<div class="kt-portlet__body kt-portlet__body--fit">
+
+			<!--begin: Datatable -->
+			<div class="kt-datatable kt-datatable--default kt-datatable--brand kt-datatable--loaded" id="local_data">
+				<table class="kt-datatable__table" style="display: block; overflow:scroll">
+					<thead class="kt-datatable__head">
+						<tr class="kt-datatable__row" style="left: 0px;">
+							<th class="kt-datatable__cell kt-datatable__cell--sort" data-field="Name">
+								<span style="width: 110px;">Name</span>
+							</th>
+							<th class="kt-datatable__cell kt-datatable__cell--sort" data-field="Fullname">
+								<span style="width: 110px;">Fullname</span>
+							</th>
+							<th class="kt-datatable__cell kt-datatable__cell--sort" data-field="Email">
+								<span style="width: 110px;">Email</span>
+							</th>
+						</tr>
+					</thead>
+					<tbody class="kt-datatable__body" id="et-student-no-interaction-28-list">
+
+					</tbody>
+				</table>
+
+			</div>
+
+			<!--end: Datatable -->
+
+		</div>
+	</div>
+	<div class="kt-portlet kt-portlet--mobile et-scrollable-table">
+		<div class="kt-portlet__head kt-portlet__head--lg">
+			<div class="kt-portlet__head-label">
+				<h3 class="kt-portlet__head-title">
+					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
+						height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
+						<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+							<rect x="0" y="0" width="24" height="24" />
+							<path
+								d="M11.1669899,4.49941818 L2.82535718,19.5143571 C2.557144,19.9971408 2.7310878,20.6059441 3.21387153,20.8741573 C3.36242953,20.9566895 3.52957021,21 3.69951446,21 L21.2169432,21 C21.7692279,21 22.2169432,20.5522847 22.2169432,20 C22.2169432,19.8159952 22.1661743,19.6355579 22.070225,19.47855 L12.894429,4.4636111 C12.6064401,3.99235656 11.9909517,3.84379039 11.5196972,4.13177928 C11.3723594,4.22181902 11.2508468,4.34847583 11.1669899,4.49941818 Z"
+								fill="#000000" opacity="0.3" />
+							<rect fill="#000000" x="11" y="9" width="2" height="7" rx="1" />
+							<rect fill="#000000" x="11" y="17" width="2" height="2" rx="1" />
+						</g>
+					</svg>
+					Top 5 tutors having many messages
+				</h3>
+			</div>
+		</div>
+		<div class="kt-portlet__body kt-portlet__body--fit">
+
+			<!--begin: Datatable -->
+			<div class="kt-datatable kt-datatable--default kt-datatable--brand kt-datatable--loaded" id="local_data">
+				<table class="kt-datatable__table" style="display: block; overflow:scroll">
+					<thead class="kt-datatable__head">
+						<tr class="kt-datatable__row" style="left: 0px;">
+							<th class="kt-datatable__cell kt-datatable__cell--sort" data-field="Name">
+								<span style="width: 110px;">Name</span>
+							</th>
+							<th class="kt-datatable__cell kt-datatable__cell--sort" data-field="Fullname">
+								<span style="width: 110px;">Fullname</span>
+							</th>
+							<th class="kt-datatable__cell kt-datatable__cell--sort" data-field="Email">
+								<span style="width: 110px;">Email</span>
+							</th>
+						</tr>
+					</thead>
+					<tbody class="kt-datatable__body" id="et-top-five-tutor-message-list">
+
+					</tbody>
+				</table>
+
+			</div>
+
+			<!--end: Datatable -->
+
+		</div>
+	</div>
+</div>

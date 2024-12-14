@@ -1,0 +1,7 @@
+.et-meeting-title{
+    display: flex;
+    justify-content: space-between;
+}
+.et-delete-meeting-btn:hover{
+    cursor: pointer;
+}

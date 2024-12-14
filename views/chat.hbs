@@ -1,0 +1,211 @@
+<div class="kt-content  kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor" id="kt_content">
+
+	<!-- begin:: Content -->
+	<div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
+
+		<!--Begin::App-->
+		<div class="kt-grid kt-grid--desktop kt-grid--ver kt-grid--ver-desktop kt-app">
+
+			<!--Begin:: App Aside Mobile Toggle-->
+			<button class="kt-app__aside-close" id="kt_chat_aside_close">
+				<i class="la la-close"></i>
+			</button>
+
+			<!--End:: App Aside Mobile Toggle-->
+
+			<!--Begin:: App Aside-->
+			<div class="kt-grid__item kt-app__toggle kt-app__aside kt-app__aside--lg kt-app__aside--fit"
+				id="kt_chat_aside">
+
+				<!--begin::Portlet-->
+				<div class="kt-portlet kt-portlet--last">
+					<div class="kt-portlet__body">
+						<div class="kt-searchbar">
+							<div class="input-group">
+								<div class="input-group-prepend"><span class="input-group-text" id="basic-addon1"><svg
+											xmlns="http://www.w3.org/2000/svg"
+											xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px"
+											viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
+											<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+												<rect x="0" y="0" width="24" height="24" />
+												<path
+													d="M14.2928932,16.7071068 C13.9023689,16.3165825 13.9023689,15.6834175 14.2928932,15.2928932 C14.6834175,14.9023689 15.3165825,14.9023689 15.7071068,15.2928932 L19.7071068,19.2928932 C20.0976311,19.6834175 20.0976311,20.3165825 19.7071068,20.7071068 C19.3165825,21.0976311 18.6834175,21.0976311 18.2928932,20.7071068 L14.2928932,16.7071068 Z"
+													fill="#000000" fill-rule="nonzero" opacity="0.3" />
+												<path
+													d="M11,16 C13.7614237,16 16,13.7614237 16,11 C16,8.23857625 13.7614237,6 11,6 C8.23857625,6 6,8.23857625 6,11 C6,13.7614237 8.23857625,16 11,16 Z M11,18 C7.13400675,18 4,14.8659932 4,11 C4,7.13400675 7.13400675,4 11,4 C14.8659932,4 18,7.13400675 18,11 C18,14.8659932 14.8659932,18 11,18 Z"
+													fill="#000000" fill-rule="nonzero" />
+											</g>
+										</svg></span></div>
+								<form id='et-search-chat-box-form' class="form-control">
+									<input type="text" class="form-control" id='et-search-chat-box-input'
+										placeholder="Search" aria-describedby="basic-addon1">
+								</form>
+							</div>
+						</div>
+						<div class="kt-widget kt-widget--users kt-mt-20">
+							<div class="kt-scroll kt-scroll--pull">
+								<div class="kt-widget__items" id="et-chat-list"></div>
+								<div class="kt-widget__items" id="et-search-list">
+									<div class="kt-widget__item" id='et-search-result'>
+										<span class="kt-media kt-media--circle">
+											<img src="../media/users/default.jpg" alt="image">
+										</span>
+										<div class="kt-widget__info">
+											<div class="kt-widget__section">
+												<a href="#" class="kt-widget__username" id='et-search-name'>Thao Gum</a>
+												<span class="kt-badge kt-badge--success kt-badge--dot"></span>
+											</div>
+										</div>
+									</div>
+									<div id="et-search-not-found">No user found</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!--end::Portlet-->
+			</div>
+
+			<!--End:: App Aside-->
+
+			<!--Begin:: App Content-->
+			<div class="kt-grid__item kt-grid__item--fluid kt-app__content" id="kt_chat_content">
+				<div class="kt-chat">
+					<div class="kt-portlet kt-portlet--head-lg kt-portlet--last" id='et-message-box'>
+						<div class="kt-portlet__head">
+							<div class="kt-chat__head ">
+								<div class="kt-chat__left">
+									<!--begin:: Aside Mobile Toggle -->
+									<button type="button"
+										class="btn btn-clean btn-sm btn-icon btn-icon-md kt-hidden-desktop"
+										id="kt_chat_aside_mobile_toggle">
+										<i class="flaticon2-open-text-book"></i>
+									</button>
+									<!--end:: Aside Mobile Toggle-->
+								</div>
+								<div class="kt-chat__center">
+									<div class="kt-chat__label">
+										<a href="#" class="kt-chat__title" id='et-group-name'></a>
+									</div>
+									<div class="kt-chat__pic kt-hidden">
+										<span class="kt-media kt-media--sm kt-media--circle" data-toggle="kt-tooltip"
+											data-placement="right" title="Jason Muller"
+											data-original-title="Tooltip title">
+											<img src="assets/media/users/300_12.jpg" alt="image">
+										</span>
+										<span class="kt-media kt-media--sm kt-media--circle" data-toggle="kt-tooltip"
+											data-placement="right" title="Nick Bold"
+											data-original-title="Tooltip title">
+											<img src="assets/media/users/300_11.jpg" alt="image">
+										</span>
+										<span class="kt-media kt-media--sm kt-media--circle" data-toggle="kt-tooltip"
+											data-placement="right" title="Milano Esco"
+											data-original-title="Tooltip title">
+											<img src="assets/media/users/100_14.jpg" alt="image">
+										</span>
+										<span class="kt-media kt-media--sm kt-media--circle" data-toggle="kt-tooltip"
+											data-placement="right" title="Teresa Fox"
+											data-original-title="Tooltip title">
+											<img src="assets/media/users/100_4.jpg" alt="image">
+										</span>
+									</div>
+								</div>
+								<div class="kt-chat__right">
+									{{!-- <button type="button" id="et-call-btn">Call</button> --}}
+									<span id="et-call-btn">
+										<svg xmlns="http://www.w3.org/2000/svg"
+											xmlns:xlink="http://www.w3.org/1999/xlink" width="50px" height="50px"
+											viewBox="0 0 24 24" version="1.1" style="width: 2.5rem;height: 2.5rem;">
+											<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+												<rect x="0" y="0" width="24" height="24" />
+												<path
+													d="M12,22 C6.4771525,22 2,17.5228475 2,12 C2,6.4771525 6.4771525,2 12,2 C17.5228475,2 22,6.4771525 22,12 C22,17.5228475 17.5228475,22 12,22 Z M11.613922,13.2130341 C11.1688026,13.6581534 10.4887934,13.7685037 9.92575695,13.4869855 C9.36272054,13.2054673 8.68271128,13.3158176 8.23759191,13.760937 L6.72658218,15.2719467 C6.67169475,15.3268342 6.63034033,15.393747 6.60579393,15.4673862 C6.51847004,15.7293579 6.66005003,16.0125179 6.92202169,16.0998418 L8.27584113,16.5511149 C9.57592638,16.9844767 11.009274,16.6461092 11.9783003,15.6770829 L15.9775173,11.6778659 C16.867756,10.7876271 17.0884566,9.42760861 16.5254202,8.3015358 L15.8928491,7.03639343 C15.8688153,6.98832598 15.8371895,6.9444475 15.7991889,6.90644684 C15.6039267,6.71118469 15.2873442,6.71118469 15.0920821,6.90644684 L13.4995401,8.49898884 C13.0544207,8.94410821 12.9440704,9.62411747 13.2255886,10.1871539 C13.5071068,10.7501903 13.3967565,11.4301996 12.9516371,11.8753189 L11.613922,13.2130341 Z"
+													fill="#5d78ff" />
+											</g>
+										</svg>
+									</span>
+								</div>
+							</div>
+						</div>
+						<div class="kt-portlet__body">
+							<div class="kt-scroll kt-scroll--pull" data-mobile-height="300">
+								<div class="kt-chat__messages" id="et-message-list"></div>
+							</div>
+						</div>
+						<div class="kt-portlet__foot">
+							<form id="et-message-form">
+								<div class="kt-chat__input">
+									<div class="kt-chat__editor">
+										<textarea style="height: 50px" placeholder="Type here..."
+											id="et-message-text"></textarea>
+									</div>
+									<div class="kt-chat__toolbar">
+										<div class="kt_chat__tools"></div>
+										<div class="kt_chat__actions">
+											<button type="submit"
+												class="btn btn-brand btn-md btn-upper btn-bold kt-chat__reply"
+												id="et-reply-btn">reply</button>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!--End:: App Content-->
+		</div>
+
+		<!--End::App-->
+	</div>
+
+	<!-- end:: Content -->
+</div>
+
+{{#if isTutorOrStudent}}
+{{#if isStudent }}
+	<p></p>
+{{else}}
+<ul class="kt-sticky-toolbar" style="margin-top: 30px;">
+	<li class="kt-sticky-toolbar__item kt-sticky-toolbar__item--brand" id="kt_sticky_toolbar_chat_toggler"
+		data-toggle="kt-tooltip" title="" data-placement="left" data-original-title="Student list">
+		<a href="#" data-toggle="modal" data-target="#kt_chat_modal"><i class="flaticon-users-1"></i></a>
+	</li>
+</ul>
+{{/if}}
+{{/if}}
+
+<div class="modal fade- modal-sticky-bottom-right show" id="kt_chat_modal" role="dialog" data-backdrop="false"
+	style="max-width: 300px" aria-modal="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+
+			<div class="kt-portlet kt-portlet--tabs kt-portlet--height-fluid">
+				<div class="kt-portlet__head">
+					<div class="kt-portlet__head-label">
+						<h3 class="kt-portlet__head-title">
+							My Students
+						</h3>
+					</div>
+					<div class="kt-portlet__head-toolbar" style="align-items: center ;">
+						<button type="button" class="btn btn-clean btn-sm btn-icon" data-dismiss="modal">
+							<i class="flaticon2-cross"></i>
+						</button>
+					</div>
+				</div>
+				<div class="kt-portlet__body">
+					<div class="tab-content">
+						<div class="tab-pane active" id="kt_widget4_tab1_content">
+							<div class="kt-widget4" id="et-student-list" style="overflow: scroll;min-height: 400px;max-height: 400px">
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>

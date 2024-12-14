@@ -1,0 +1,283 @@
+<div class="kt-content  kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor" id="kt_content">
+    <!-- begin:: Content -->
+    <div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
+        <div class="kt-portlet kt-portlet--mobile et-scrollable-table">
+            <div class="kt-portlet__head kt-portlet__head--lg">
+                <div class="kt-portlet__head-label">
+                    <span class="kt-portlet__head-icon">
+                        <i class="kt-font-brand flaticon2-line-chart"></i>
+                    </span>
+                    <h3 class="kt-portlet__head-title">
+                        Staff List
+                    </h3>
+                </div>
+                <div class="kt-portlet__head-toolbar">
+                    <div class="kt-portlet__head-wrapper" id="et-add-new-staff-btn">
+                        &nbsp;
+                        <div class="dropdown dropdown-inline">
+                            <button type="button" class="btn btn-brand btn-icon-sm" data-toggle="modal" data-target="#et_modal_create"
+                                aria-haspopup="true" aria-expanded="false">
+                                <i class="flaticon2-plus"></i> Add New
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="kt-portlet__body">
+
+                <!--begin: Search Form -->
+                <div class="kt-form kt-form--label-right kt-margin-t-20 kt-margin-b-10">
+                    <div class="row align-items-center">
+                        <div class="col-xl-8 order-2 order-xl-1">
+                            <div class="row align-items-center">
+                                <div class="col-md-4 kt-margin-b-20-tablet-and-mobile">
+                                    <div class="kt-input-icon kt-input-icon--left">
+                                        <input type="text" class="form-control" placeholder="Search..."
+                                            id="generalSearch">
+                                        <span class="kt-input-icon__icon kt-input-icon__icon--left">
+                                            <span><i class="la la-search"></i></span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 order-1 order-xl-2 kt-align-right">
+                            <a href="#" class="btn btn-default kt-hidden">
+                                <i class="la la-cart-plus"></i> New Order
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!--end: Search Form -->
+            </div>
+            <div class="kt-portlet__body kt-portlet__body--fit">
+
+                <!--begin: Datatable -->
+                <div class="kt-datatable kt-datatable--default kt-datatable--brand kt-datatable--loaded" id="local_data">
+                    <table class = "kt-datatable__table" style = "display: block; overflow:scroll">
+                        <thead class="kt-datatable__head">
+                            <tr class="kt-datatable__row" style="left: 0px;">
+                                <th class="kt-datatable__cell kt-datatable__cell--sort" data-field="User Id">
+                                    <span style="width: 110px;">User Id</span>
+                                </th>
+                                <th class="kt-datatable__cell kt-datatable__cell--sort" data-field="Name">
+                                    <span style="width: 110px;">Name</span>
+                                </th>
+                                <th class="kt-datatable__cell kt-datatable__cell--sort" data-field="Email">
+                                    <span style="width: 110px;">Email</span>
+                                </th>
+                                <th class="kt-datatable__cell kt-datatable__cell--sort" data-field="Role">
+                                    <span style="width: 110px;">Role</span>
+                                </th>
+                                <th class="kt-datatable__cell kt-datatable__cell--sort" data-field="Authorized">
+                                    <span style="width: 110px;">Authorized</span>
+                                </th>
+                                <th class="kt-datatable__cell kt-datatable__cell--sort" data-field="Actions" data-autohide-disabled="false">
+                                    <span style="width: 110px;">Actions</span>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody class="kt-datatable__body" id="et-staff-list-table">
+                        </tbody>
+                    </table>
+               
+                </div>
+
+                <!--end: Datatable -->
+
+            </div>
+        </div>
+
+        <!--begin::Modal-->
+
+        <!--begin: Modal for edit-->
+        <div class="modal fade" id="kt_modal_4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="kt-form">
+                            <div class="kt-portlet__body">
+                                <div class="form-group">
+                                    <label>Username:</label>
+                                    <input type="text" class="form-control" placeholder="Enter user name" id="et-edit-username-input">
+                                    <span class="form-text text-muted">Please enter your user name. It must be unique</span>
+                                </div>
+                                <div class="form-group">
+                                    <label>Email address:</label>
+                                    <input type="email" class="form-control" placeholder="Enter email" id="et-edit-email-input">
+                                    <span class="form-text text-muted">We'll never share your email with anyone else</span>
+                                </div>
+                                <div class="form-group">
+                                    <label>Role:</label>
+                                    <div class="kt-radio-list">
+                                        {{!-- <label class="kt-radio">
+                                            <input type="radio" name="et-role" value="admin"> Admin
+                                            <span></span>
+                                        </label> --}}
+                                        <label class="kt-radio">
+                                            <input type="radio" name="et-role" value="staff" checked> Staff
+                                            <span></span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Authorized:</label>
+                                    <div class="kt-checkbox-list">
+                                        <label class="kt-checkbox">
+                                            <input type="checkbox" id="et-edit-authorized-staff"> Yes
+                                            <span></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+
+                        <!--end::Form-->
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#et_modal_confirm_update">Update user</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--end: Modal for edit-->
+
+        <!--begin: Modal for create-->
+        <div class="modal fade" id="et_modal_create" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Add new staff</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="kt-form">
+                            <div class="kt-portlet__body">
+                                <div class="form-group">
+                                    <label>Full name:</label>
+                                    <input type="text" class="form-control" placeholder="Enter full name" id="et-add-fullname-input">
+                                    <span class="form-text text-muted">Please enter your full name</span>
+                                </div>
+                                <div class="form-group">
+                                    <label>Username:</label>
+                                    <input type="text" class="form-control" placeholder="Enter user name" id="et-add-username-input">
+                                    <span class="form-text text-muted">Please enter your user name. It must be unique</span>
+                                </div>
+                                <div class="form-group">
+                                    <label>Email address:</label>
+                                    <input type="email" class="form-control" placeholder="Enter email" id="et-add-email-input">
+                                    <span class="form-text text-muted">We'll never share your email with anyone else</span>
+                                </div>
+                                <div class="form-group">
+                                    <label>Password:</label>
+                                    <input type="password" class="form-control" placeholder="Enter your password" id="et-add-password-input">
+                                    <span class="form-text text-muted">Please enter your password. It must contain at least 1 digit, 1 uppercase letter</span>
+                                </div>
+                                <div class="form-group">
+                                    <label>Role:</label>
+                                    <div class="kt-radio-list">
+                                        <label class="kt-radio">
+                                            <input type="radio" name="et-role" value="staff" checked> Staff
+                                            <span></span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Authorized:</label>
+                                    <div class="kt-checkbox-list">
+                                        <label class="kt-checkbox">
+                                            <input type="checkbox" id="et-authorized-staff"> Yes
+                                            <span></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+
+                        <!--end::Form-->
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#et_modal_confirm_add">Add user</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--end: Modal for create-->
+
+        <!--begin: Modal for delete confirmation -->
+        <div class="modal fade" id="et_modal_confirm_delete" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Confirm!</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Do you want to delete this user ?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" id="et-delete-staff-btn">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--end: Modal for delete confirmation -->
+
+        <!--begin: Modal for update confirmation -->
+        <div class="modal fade" id="et_modal_confirm_update" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Confirm!</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Do you want to update this user ?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" id="et-update-staff-confirm-btn" >Update</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--end: Modal for update confirmation -->
+
+        <!--begin: Modal for add confirmation -->
+        <div class="modal fade" id="et_modal_confirm_add" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Confirm!</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Do you want to add this user ?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" id="et-add-staff-confirm-btn">Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--end: Modal for add confirmation -->
+
+        <!--end::Modal-->
+    </div>
+
+    <!-- end:: Content -->
+</div>

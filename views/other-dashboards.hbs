@@ -1,0 +1,105 @@
+<div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
+
+	<!--begin::Tutee list-->
+	<div class="row">
+		<div class="kt-portlet kt-portlet--mobile et-scrollable-table">
+			<div class="kt-portlet__head kt-portlet__head--lg">
+				<div class="kt-portlet__head-label">
+					<h3 class="kt-portlet__head-title">
+						<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
+							height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
+							<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+								<rect x="0" y="0" width="24" height="24" />
+								<path
+									d="M18,2 L20,2 C21.6568542,2 23,3.34314575 23,5 L23,19 C23,20.6568542 21.6568542,22 20,22 L18,22 L18,2 Z"
+									fill="#000000" opacity="0.3" />
+								<path
+									d="M5,2 L17,2 C18.6568542,2 20,3.34314575 20,5 L20,19 C20,20.6568542 18.6568542,22 17,22 L5,22 C4.44771525,22 4,21.5522847 4,21 L4,3 C4,2.44771525 4.44771525,2 5,2 Z M12,11 C13.1045695,11 14,10.1045695 14,9 C14,7.8954305 13.1045695,7 12,7 C10.8954305,7 10,7.8954305 10,9 C10,10.1045695 10.8954305,11 12,11 Z M7.00036205,16.4995035 C6.98863236,16.6619875 7.26484009,17 7.4041679,17 C11.463736,17 14.5228466,17 16.5815,17 C16.9988413,17 17.0053266,16.6221713 16.9988413,16.5 C16.8360465,13.4332455 14.6506758,12 11.9907452,12 C9.36772908,12 7.21569918,13.5165724 7.00036205,16.4995035 Z"
+									fill="#000000" />
+							</g>
+						</svg>
+						Tutors and students
+					</h3>
+				</div>
+			</div>
+
+			<!--begin::Toolbar-->
+			<div class="kt-portlet__body">
+				<div class="kt-form kt-form--label-right kt-margin-t-20 kt-margin-b-10">
+					<div class="row align-items-center">
+						<div class="col-xl-8 order-2 order-xl-1">
+							<div class="row align-items-center">
+								<!--begin::Search name-->
+								<div class="col-md-4 kt-margin-b-20-tablet-and-mobile">
+									<div class="kt-input-icon kt-input-icon--left">
+										<input type="text" class="form-control" placeholder="Search..."
+											id="generalSearch">
+										<span class="kt-input-icon__icon kt-input-icon__icon--left">
+											<span><i class="la la-search"></i></span>
+										</span>
+									</div>
+								</div>
+								<!--end::Search name-->
+
+								<!--begin::Filter major-->
+								<div class="col-md-4 kt-margin-b-20-tablet-and-mobile">
+									<select class="form-control kt-selectpicker custom-select" id="et-role-select-menu">
+										<option value="all">All</option>
+										<option value="staff">Staff</option>
+										<option value="student">Student</option>
+									</select>
+								</div>
+								<!--begin::Filter major-->
+								<div class="col-md-4 kt-margin-b-20-tablet-and-mobile">
+									<button type='button' class='btn btn-label-brand' id="et-filter-user-btn">Filter</button>
+									<button type='button' class='btn btn-label-danger' id="et-clear-filter-btn">Clear</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--end::Toolbar-->
+
+			<!--begin::student list table-->
+			<div class="kt-portlet__body kt-portlet__body--fit">
+
+				<!--begin: Datatable -->
+				<div class="kt-datatable kt-datatable--default kt-datatable--brand kt-datatable--loaded"
+					id="local_data">
+					<table class="kt-datatable__table" style="display: block; overflow:scroll">
+						<thead class="kt-datatable__head">
+							<tr class="kt-datatable__row" style="left: 0px;">
+								<th class="kt-datatable__cell kt-datatable__cell--sort" data-field="Name">
+									<span style="width: 110px;">Name</span>
+								</th>
+								<th class="kt-datatable__cell kt-datatable__cell--sort" data-field="Fullname">
+									<span style="width: 110px;">Fullname</span>
+								</th>
+								<th class="kt-datatable__cell kt-datatable__cell--sort" data-field="Email">
+									<span style="width: 110px;">Email</span>
+								</th>
+								<th class="kt-datatable__cell kt-datatable__cell--sort" data-field="Role">
+									<span style="width: 110px;">Role</span>
+								</th>
+                                <th class="kt-datatable__cell kt-datatable__cell--sort" data-field="Action">
+									<span style="width: 110px;">Action</span>
+								</th>
+							</tr>
+						</thead>
+						<tbody class="kt-datatable__body" id="et-staff-student-list">
+
+						</tbody>
+					</table>
+
+				</div>
+
+				<!--end: Datatable -->
+
+			</div>
+		</div>
+
+	</div>
+	<!--end::Tutee list-->
+
+</div>

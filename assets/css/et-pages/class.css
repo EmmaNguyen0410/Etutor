@@ -1,0 +1,26 @@
+#et-add-post-btn{
+    background-color: #5d78ff;
+    color: #ffffff
+}
+#et-add-meeting-btn{
+    background-color: #5d78ff;
+    color: #ffffff
+}
+#et-redirect-class-stream:hover{
+    cursor: pointer;
+}
+#et-redirect-class-people:hover{
+    cursor: pointer;
+}
+#et-redirect-class-meeting:hover{
+    cursor: pointer;
+}
+#et-cancel-call-btn:hover{
+    cursor: pointer;
+}
+#et-decline-call-btn:hover{
+    cursor: pointer;
+}
+#et-accept-call-btn:hover{
+    cursor: pointer;
+}

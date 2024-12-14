@@ -1,0 +1,72 @@
+<div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
+	<!--Begin::Tasks-->
+	<div class="kt-grid kt-grid--desktop kt-grid--ver-desktop  kt-todo" id="kt_todo">
+		<!--Begin:: Tasks Content-->
+		<div class="kt-grid__item kt-grid__item--fluid kt-todo__content" id="kt_todo_content">
+			<div class="kt-todo__tasks-bottom" id="et-post-container">
+			</div>
+		</div>
+
+		<!--End:: Tasks Content-->
+	</div>
+
+	<!--End::Tasks-->
+	{{!-- <form action="/file/upload" method="post" enctype="multipart/form-data">
+		<input type="file" name="filetoupload" multiple>
+		<input type="submit" id="et-upload-btn">
+	</form> --}}
+	{{!-- <form enctype="multipart/form-data" id="et-upload-form">
+		<input type="file" name="filetoupload" multiple>
+		<input type="button" id="et-upload-btn">
+	</form> --}}
+
+
+	<div class="modal fade" id="et_modal_add_new_post" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+		aria-hidden="true">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Add new post</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					</button>
+				</div>
+				<div class="modal-body">
+					<form class="kt-form" enctype="multipart/form-data" id="et-add-new-post-form">
+						<div class="kt-portlet__body">
+							<div class="form-group">
+								<label>Post title:</label>
+								<input type="text" class="form-control" placeholder="Enter your post's title"
+									id="et-post-title-input">
+								<span class="form-text text-muted">This is the title of your post.</span>
+							</div>
+							<div class="form-group">
+								<label>Content:</label>
+								<textarea class="form-control" rows="8" placeholder="Please enter your post's content"
+									id="et-post-content-input"></textarea>
+								<span class="form-text text-muted">This is the content of your post.</span>
+							</div>
+							<div class="form-group">
+								<label>Upload Files:</label>
+								<div class="dropzone dropzone-multi" id="kt_dropzone_4">
+									<div class="dropzone-panel">
+										<input type="file" id="et-upload-file-input" name="filetoupload" multiple>
+									</div>
+									<div class="dropzone-items" id="et-show-upload-items">
+									</div>
+								</div>
+								<span class="form-text text-muted">Max file size is 1MB and max number of files is
+									5.</span>
+							</div>
+						</div>
+					</form>
+
+					<!--end::Form-->
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary" id="et-add-new-post-btn">Add Post</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

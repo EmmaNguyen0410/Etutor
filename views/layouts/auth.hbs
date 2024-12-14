@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etutoring</title>
+
+    <!--begin::Fonts -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700|Roboto:300,400,500,600,700">
+    <!--end::Fonts -->
+
+    <!--begin::Page Custom Styles(used by this page) -->
+    {{#each thisPageStyleSheets}}
+        <link href="{{this}}" rel="stylesheet" type="text/css" />
+    {{/each}}
+    <!--end::Page Custom Styles -->
+
+    <!--begin::Global Theme Styles(used by all pages) -->
+    <link href="../plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
+    <link href="../css/style.bundle.css" rel="stylesheet" type="text/css" />
+    <!--end::Global Theme Styles -->
+
+	<!--begin::Page Theme Image -->
+	<link rel="shortcut icon" href="../assets/media/logos/favicon.ico" />
+    <!--end::Page Theme Image-->
+</head>
+
+<body
+    class="kt-quick-panel--right kt-demo-panel--right kt-offcanvas-panel--right kt-header--fixed kt-header-mobile--fixed kt-subheader--enabled kt-subheader--fixed kt-subheader--solid kt-aside--enabled kt-aside--fixed kt-page--loading">
+    {{{body}}}
+</body>
+
+</html>
